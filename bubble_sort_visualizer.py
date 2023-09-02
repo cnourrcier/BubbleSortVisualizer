@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import random
-import time
 
 # Generate random data
 data = [random.randint(1, 100) for _ in range(10)]
@@ -18,7 +17,7 @@ def bubble_sort_visualized(arr):
         for j in range(0, n-i-1):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-                visualize(arr) # Call the visualize function after each pass
+                visualize(arr) # Call the visualize function after each comparison
 
 # Call the sorting function
 bubble_sort_visualized(data)
