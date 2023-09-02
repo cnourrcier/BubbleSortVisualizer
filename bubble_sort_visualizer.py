@@ -8,8 +8,9 @@ data = [random.randint(1, 100) for _ in range(50)]
 # Visualize the data
 def visualize(data):
     plt.bar(range(len(data)), data)
-    plt.show()
-    time.sleep(0.1)
+    plt.show(block=False) # block=False means to not block code execution
+    plt.pause(0.1)        # Pause to allow time for visualization
+    plt.close()           # Close the graph window after pausing
 
 def bubble_sort_visualized(arr):
     n = len(arr)
